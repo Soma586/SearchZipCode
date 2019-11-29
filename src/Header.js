@@ -3,7 +3,10 @@ import React from 'react';
 
 let Header =() =>{
     return(
-        <header>Zip Search</header>
+        <header>
+            <h1>ZipCode Search</h1>
+            
+            </header>
 
     )
 

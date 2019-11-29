@@ -2,6 +2,7 @@ import React from 'react';
 //import CityInfo from './cityInfo';
 import Header from './Header'
 import Info from './Fetcher'
+import './App.css'
 
 //import axios from 'axios';
 

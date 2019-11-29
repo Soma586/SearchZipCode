@@ -54,8 +54,9 @@ class Fetcher extends Component{
                 
                 <Form search = {this.search}/>
                 
-                
+                <div className = "city-container">
                 {results}
+                </div>
 
             </div>
         )
