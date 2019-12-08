@@ -5,6 +5,8 @@ function CityInfo(props) {
 
   return(
     <div className = "card">
+
+  <h2>{props.city}, {props.State} {props.ZipCode}</h2>
         <ul>
             <li>State : {props.State}</li>
             <li>Location : {props.Coordinates}, </li>

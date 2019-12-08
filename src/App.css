@@ -6,14 +6,15 @@ header{
   text-align: center;
 }
 
+form{
+  text-align: center;
+}
+
 
 
 .city-container{
 
-  /* width : 50%; */
   width : 90%;
-  /* margin-left: 50%; */
-
   display : flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -22,17 +23,21 @@ header{
 
 
 .card{
-
   width : 300px;
-  /* background-color: aqua; */
-  
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  margin : 20px;
-  padding-bottom : 10px;
-  
-
+  padding-bottom : 15px; 
+  margin : 10px;
 }
 .card:hover{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4)
+}
+
+.card h2{
+  background-color: lightgray;
+  margin-top : 0px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
 }

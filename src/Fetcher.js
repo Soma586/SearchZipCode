@@ -22,8 +22,6 @@ class Fetcher extends Component{
                
                 this.setState({
                     cities : data
-                    
-
                 })
                 
             })
@@ -31,22 +29,12 @@ class Fetcher extends Component{
 
     }
 
-    click = () =>{
-        
-    }
     render(){
         console.log("city information " + this.state.cities.City)
-        //const results = this.state.cities.map((city) => {
-           // <CityInfo state = {city.City} />
-       // })
-        //const result = 
-        //const results = this.state.cities.map(city => <CityInfo city = {console.log(city.City.City)}/>)
-       const results = this.state.cities.map(city => <CityInfo State = {city.State} Coordinates = {city.Location} population = {city.EstimatedPopulation} wages = {city.TotalWages}/>)
-       //<Form search = {this.search}/>
-       //const results = zipData.map( i => {
-         // return( <CityInfo state = {i.statel}/>)
-      // })
-
+        
+       const results = this.state.cities.map(city => <CityInfo State = {city.State} Coordinates = {city.Location} population = {city.EstimatedPopulation}
+         wages = {city.TotalWages} city = {city.City} ZipCode = {city.Zipcode}/>)
+       
        console.log(results)
 
         return(
