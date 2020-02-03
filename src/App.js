@@ -13,6 +13,10 @@ let App = () =>{
       <Header/>
     <Info/>
 
+    <div id = "map">
+      
+    </div>
+
 
     </div>
     

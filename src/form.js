@@ -6,7 +6,7 @@ let Form = (props) =>{
         <div>
             <form>
                 <label>Zip Code:</label>
-                <input id = "zip" onChange = {props.search}/>
+                <input id = "zip" onChange = {props.search} maxLength = "5"/>
                 
 
 
