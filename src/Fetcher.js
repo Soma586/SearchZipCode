@@ -5,6 +5,7 @@ import zipData from './zipData'
 import Loader from 'react-loader-spinner'
 
 
+
 class Fetcher extends Component{
     
         state = {
