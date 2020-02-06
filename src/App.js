@@ -6,16 +6,16 @@ import './App.css'
 //import Map from './gmap'
 
 //import axios from 'axios';\
-import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
+//import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
 
 
 
     
-    function jord(lat, lng){
-       return  <GoogleMap defaultZoom = {10} defaultCenter={{lat : 20, lng : 105}}/>
-    }
+  //   function jord(lat, lng){
+  //      return  <GoogleMap defaultZoom = {10} defaultCenter={{lat : 20, lng : 105}}/>
+  //   }
 
-   const WrappedMap = withScriptjs(withGoogleMap(jord))
+  //  const WrappedMap = withScriptjs(withGoogleMap(jord))
 
 
 let App = () =>{
