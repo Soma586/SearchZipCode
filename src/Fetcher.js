@@ -30,6 +30,7 @@ class Fetcher extends Component{
     }
 
     render(){
+        console.log("this is feb")
         console.log("city information " + this.state.cities.City)
         
        const results = this.state.cities.map(city => <CityInfo State = {city.State} Coordinates = {city.Location} population = {city.EstimatedPopulation}
