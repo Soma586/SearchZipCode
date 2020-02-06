@@ -31,7 +31,7 @@ class Fetcher extends Component{
         const input = document.getElementById("zip").value
        
         if(input.length === 5){
-            fetch("http://ctp-zip-api.herokuapp.com/zip/" + input)
+            fetch("https://ctp-zip-api.herokuapp.com/zip/" + input)
             .then(response => response.json())
             .then(data =>{
                 console.log(data)
