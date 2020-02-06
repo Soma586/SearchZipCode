@@ -3,6 +3,8 @@ import CityInfo from './cityInfo'
 import Form from './form'
 import zipData from './zipData'
 import Loader from 'react-loader-spinner'
+import {GoogleMap, withScriptjs, withGoogleMap, Marker} from 'react-google-maps'
+
 
 
 
@@ -12,7 +14,9 @@ class Fetcher extends Component{
             cities :[],
             isPending : false,
             isSubmitted: false,
-            isError: false
+            isError: false,
+            lat : 20,
+            lng : -100
 
         }
 
@@ -24,6 +28,23 @@ class Fetcher extends Component{
                 isError: false
             })
         }
+
+         jord =() =>{
+            return  <GoogleMap defaultZoom = {10} 
+            center={{lat : this.state.lat, lng : this.state.lng}}
+            onClick = {this.onMapClicked}
+            />
+         }
+
+         componentDidMount(){
+             this.setState({
+                 lat: this.state.cities.Lat,
+                lng : this.state.cities.Long
+             })
+         }
+     
+       // const WrappedMap = withScriptjs(withGoogleMap(jord))
+     
     
 
     search = () =>{
@@ -50,9 +71,12 @@ class Fetcher extends Component{
                     cities : data,
                     isPending : false,
                     isSubmitted: false,
-                    isError: false
+                    isError: false,
+                    lat : data.Lat,
+                    lng : data.Long
 
                 })
+                this.componentDidMount()
                 
             })
             .catch(error =>{
@@ -98,6 +122,12 @@ class Fetcher extends Component{
        
        console.log(results)
 
+    //    this.setState({
+    //        lat : this.state.cities.Lat,
+    //        lng : this.state.cities.Long
+    //    })
+       const WrappedMap = withScriptjs(withGoogleMap(this.jord))
+
         return(
             <div>
                  
@@ -108,6 +138,20 @@ class Fetcher extends Component{
                 <div className = "city-container">
                 {results}
                 </div>
+
+                  <div style = {{width: '50vw', height : '50vh'}}>
+        <WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
+          AIzaSyBRuMgpPCklP_WPwA4ed0jUghNDIlaaXCM
+        `} 
+        loadingElement = {<div style = {{height : "100%"}}/>}
+        containerElement = {<div style = {{height : "100%"}}/>}
+        mapElement = {<div style = {{height : "100%"}}/>}
+        />
+        </div>
+
+       
+
+        
 
             </div>
         )

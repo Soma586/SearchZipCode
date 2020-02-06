@@ -11,7 +11,7 @@ import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
 
 
     
-    function jord(){
+    function jord(lat, lng){
        return  <GoogleMap defaultZoom = {10} defaultCenter={{lat : 20, lng : 105}}/>
     }
 
@@ -24,7 +24,7 @@ let App = () =>{
       <Header/>
     <Info/>
 
-    <div style = {{width: '50vw', height : '50vh'}}>
+    {/* <div style = {{width: '50vw', height : '50vh'}}>
         <WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
           AIzaSyBRuMgpPCklP_WPwA4ed0jUghNDIlaaXCM
         `} 
@@ -32,7 +32,7 @@ let App = () =>{
         containerElement = {<div style = {{height : "100%"}}/>}
         mapElement = {<div style = {{height : "100%"}}/>}
         />
-        </div>
+        </div> */}
 
    
       
