@@ -13,7 +13,8 @@ class Fetcher extends Component{
             isSubmitted: false,
             isError: false,
         }
-    
+
+     
 
         
         updateState = () =>{
@@ -26,13 +27,15 @@ class Fetcher extends Component{
         }
 
     search = () =>{
+        this.updateState();
         const input = document.getElementById("zip").value
+       
         if(input.length === 5){
             fetch("http://ctp-zip-api.herokuapp.com/zip/" + input)
             .then(response => response.json())
             .then(data =>{
                 console.log(data)
-                console.log("hello")
+                console.log("this is new")
                
                 this.setState({
                     cities : data,
@@ -40,6 +43,7 @@ class Fetcher extends Component{
                     isSubmitted: false,
                     isError: false,
                 })
+             
                 
             })
             .catch(error =>{
@@ -87,16 +91,24 @@ class Fetcher extends Component{
        
        console.log(results)
 
+
         return(
             <div>
-                
+                 
                 <Form search = {this.search}/>
                 {loader}
                 <div className = "city-container">
                 {results}
                 </div>
 
-            </div>
+            
+        </div>
+
+       
+
+        
+
+           
         )
     }
 }

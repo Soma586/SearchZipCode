@@ -10,7 +10,24 @@ form{
   text-align: center;
 }
 
+.message{
+  text-align: center;
+}
 
+.loader-container{
+  text-align: center;
+}
+
+/* #map{
+  width: 100vw;
+  height: 100vh;
+} */
+
+.jord{
+  width: 100vw;
+  height: 100vh;
+
+}
 
 .city-container{
 

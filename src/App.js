@@ -4,17 +4,17 @@ import Header from './Header'
 import Info from './Fetcher'
 import './App.css'
 
-//import axios from 'axios';
 
 
 let App = () =>{
   return (
     <div>
       <Header/>
-    <Info/>
-
-
+      <Info/> 
     </div>
+
+
+    
     
   )
 
