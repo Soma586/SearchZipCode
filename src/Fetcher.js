@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import CityInfo from './cityInfo'
 import Form from './form'
 import zipData from './zipData'
+import Loader from 'react-loader-spinner'
 
 
 class Fetcher extends Component{
@@ -90,7 +91,7 @@ class Fetcher extends Component{
             <div>
                 
                 <Form search = {this.search}/>
-                
+                {loader}
                 <div className = "city-container">
                 {results}
                 </div>
